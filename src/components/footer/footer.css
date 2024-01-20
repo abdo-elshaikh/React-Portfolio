@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: #324651 solid 2px;
+    margin-top: 2rem;
+    min-height: 100px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+footer .social-icons a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}

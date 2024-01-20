@@ -1,0 +1,224 @@
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    box-shadow: #324651 0 0 10px;
+    border-radius: 10px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 5px #324651;
+    color: #f2f2f2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.content .projects-categories {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 30%;
+    border-right: #324651 solid 2px;
+    margin-bottom: 1rem;
+
+}
+
+.projects-categories .active {
+    outline: none;
+    background-color: #757575;
+    color: #f2f2f2;
+    padding: .6rem;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.dark .projects-categories .active {
+    background-color: #324651;
+}
+
+.projects-categories button {
+    margin-bottom: 1rem;
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        background-color: #757575;
+        color: #f2f2f2;
+        border: #f2f2f2 solid 1px;
+        padding: .6rem;
+        font-weight: bold;
+    }
+
+    &:active {
+        transform: scale(0.9);
+        transition: scale 0.3s slow ease;
+        opacity: 1;
+        background-color: #757575;
+    }
+}
+
+.projects-categories button:not(:hover) {
+    transition: transform 0.3s ease;
+}
+
+.dark .projects-categories button:hover {
+    background-color: #324651;
+}
+
+.dark .projects-categories button:active {
+    background-color: #324651;
+}
+
+.project-details {
+    display: flex;
+    padding: 10px 0;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 60%;
+    /* height: 1000px; */
+    overflow: auto;
+}
+
+.project-details .project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: #324651 solid 1px;
+    border-radius: 5px;
+    width: 220px;
+    height: 350px;
+    margin: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    .project-img {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .project-title {
+        margin: 0 10px;
+        text-wrap: none;
+        margin-top: 160px;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+
+    .project-category {
+        margin: 0 10px;
+        text-wrap: none;
+        margin-top: 10px;
+        font-size: 0.8rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .project-description {
+        margin: 0;
+        text-wrap: none;
+        padding: 2px;
+        opacity: 0.8;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .project-btn {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #3f4040;
+        color: #f2f2f2;
+        cursor: pointer;
+        height: 30px;
+        border: none;
+    }
+}
+
+.project-details .project:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: #5c8297 0 0 10px;
+
+    button {
+        background-color: #8F8F8F;
+        transition: background-color 0.3s ease;
+    }
+
+    img {
+        transition: transform 0.3s ease;
+        transform: scale(1.1);
+    }
+
+}
+
+.dark .project:hover button{
+    background-color: #273740;
+}
+
+.project:not(:hover) {
+    transition: transform 0.3s ease;
+}
+
+.project:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content .projects-categories {
+        width: 90%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: #324651 solid 1px;
+        margin: auto;
+        flex-wrap: wrap;
+
+        button {
+            width: calc(100% / 5);
+            height: 30px;
+            font-size: .7rem;
+            margin-left: 0.5rem;
+
+        }
+    }
+
+    .project-details {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border: none;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content .projects-categories button {
+        width: calc(100% / 3);
+        margin-left: 2rem;
+    }
+}
