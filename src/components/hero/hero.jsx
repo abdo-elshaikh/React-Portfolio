@@ -11,7 +11,7 @@ export default function Hero() {
     <div className="hero-section">
       <div className="left-section">
         <div className="picture">
-          <img src="./my5.png" alt="hero" />
+          <img src="./a1.png" alt="hero" />
           <div className="circle">
             <FontAwesomeIcon icon={faCertificate} className='certificate' />
             <FontAwesomeIcon icon={faCheck} className='check' />
